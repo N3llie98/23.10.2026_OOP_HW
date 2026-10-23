@@ -7,7 +7,6 @@ class Pair {
 	T1 a;
 	T2 b;
 public:
-	Pair();
 	Pair(T1 _a, T2 _b);
 	void init(T1 _a, T2 _b);
 	void show();
@@ -15,16 +14,9 @@ public:
 	void copyFrom(const Pair<T1, T2>& other);
 	void clear();
 
-	T1 getFirst();
-	T2 getSecond();
+	T1 getFirst()const;
+	T2 getSecond()const;
 };
-
-template<class T1, class T2>
-Pair<T1, T2>::Pair()
-{
-	a = 0;
-	b = 0;
-}
 
 template<class T1, class T2>
 Pair<T1, T2>::Pair(T1 _a, T2 _b)
@@ -61,13 +53,13 @@ void Pair<T1, T2>::clear()
 }
 
 template<class T1, class T2>
-T1 Pair<T1, T2>::getFirst()
+T1 Pair<T1, T2>::getFirst()const
 {
 	return a;
 }
 
 template<class T1, class T2>
-T2 Pair<T1, T2>::getSecond()
+T2 Pair<T1, T2>::getSecond()const
 {
 	return b;
 }
